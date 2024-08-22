@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, arial;
+}
+
+/* -------- inner cusor anim -------- */
+@keyframes inner-c-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------- header section style -------- */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  width: 50px;
+  margin: 0 20px;
+}
+#first-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#second-nav {
+   display: none;
+}
+#second-nav.active {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
+#nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nav-list li{
+  list-style: none;
+  margin: 20px 20px;
+}
+#nav-list li.active {
+  font-weight: bolder;
+}
+.nav-itm-link {
+  text-decoration: none;
+  color: black;
+}
+#nav-opener-sec {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+/* --------- main section style ----------- */
+#cusor-cover {
+  display: none;
+  justify-content: center;
+  justify-items: center;
+  position: fixed;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+#inner-c-cv {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: 2px 0 0 0;
+  border-top-color: white;
+  border-bottom-color: white; 
+}
+#inner-c-cv.active {
+  animation: inner-c-rotation 1s 0s infinite linear;
+}
+#desc h1:nth-child(1) {
+  font-size: 20px;
+  padding: 10px 0 10px 64px;
+  width: 70%;
+}
+#desc h1:nth-child(2) {
+  font-size: 70px;
+  margin: 0 0 0 60.7px;
+}
+.black-a {
+  display: inline-block;
+  color: white;
+  background: black;
+  width: 60px;
+  text-align: center;
+}
+#desc h1:nth-child(3) {
+  font-size: 70px;
+  width: 60px;
+  margin: 0 0 0 216px;
+  text-align: center; 
+  color: white;
+  background-color: black;
+}
+#banner-img-sec {
+  margin: 10px;
+}
+#banner-img {
+  width: 100%;
+}
+
+/* ------------- visual art overview sec style ------- */
+#vsl-art {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 0 0;
+}
+#v-a-desc {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+#v-a-desc h1 {
+  font-size: 25px;
+}
+#v-a-img-sec {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.v-a-img-wrap{
+  text-align: center;
+}
+.v-a-img {
+  width: 90%;
+  text-align: center;
+}
+
+/* ------------- category section style ------------- */
+#category-sec {
+  width: 90%;
+  margin: 50px auto;
+}
+.categories {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 30px 0;
+}
+.c-img-wrap {
+  text-align: center;
+}
+.c-desc h1 {
+  width: 90%;
+  font-size: 55px;
+  margin: 0 auto;
+}
+.c-img {
+  width: 90%;
+}
+
+/* -------------- responsive design of screen more than 768 pixel ---------- */
+@media only screen and (min-width: 768px) {
+  /*---------------- header section style ---------------*/
+  header {
+    flex-direction: row;
+    justify-content: start;
+  }
+  #first-nav {
+    width: auto;
+  }
+  #nav-opener-sec {
+    display: none;
+  }
+  #second-nav {
+    display: block;
+  }
+  #nav-list {
+    flex-direction: row;
+  } 
+
+ /*------------ banner section style --------------*/
+  #banner {
+    display: flex;
+    align-items: center;
+  }
+  #desc {
+    flex-basis: 90%;
+  }
+   #desc h1:nth-child(1) {
+    font-size: 25px;
+  }
+  #desc h1:nth-child(2) {
+    font-size: 80px;
+  }
+  .black-a {
+    width: 70px;
+  }
+  #desc h1:nth-child(3) {
+    font-size: 80px;
+    width: 70px;
+    margin: 0 0 0 247px;
+  }
+  
+  /* --------- visual art overview sec style -------- */
+  #v-a-desc {
+    width: 80%;
+  }
+  #v-a-desc h1 {
+    font-size: 35px;
+  }
+  #v-a-img-sec {
+    flex-direction: row;
+    margin: 20px 0;
+  }
+  .v-a-img-wrap {
+    flex-basis: 25%;
+  }
+  
+  /* ------------- category section style ------------- */
+  .categories {
+    flex-direction: row;
+    align-items: center;
+  }
+  .categories:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .c-img-wrap {
+    flex-basis: 50%;
+  }
+  .c-desc h1 {
+    font-size: 50px;
+    transform: rotate(90deg);
+    height: 250px;
+    margin: 40px 0 0 0;
+  }
+}
+
+/* ----------- responsive design of large tablet and laptop --------------- */
+@media only screen and (min-width: 980px) {
+  /* ---------- banner section design ---------- */
+  #cusor-cover {
+    display: flex;
+  }
+  #desc {
+    flex-basis: 70%;
+  }
+  #desc h1:nth-child(1) {
+    font-size: 30px;
+  }
+  #desc h1:nth-child(2) {
+    font-size: 100px;
+  }
+  .black-a {
+    width: 100px;
+  }
+  #desc h1:nth-child(3) {
+    font-size: 100px;
+    width: 100px;
+    margin: 0 0 0 284px;
+  }
+  
+  /* -------------- visual art overview sec style ---------- */
+  #v-a-desc {
+    width: 70%;
+  }
+  
+   /* ------------- category section style ------------- */
+  .c-desc h1 {
+    font-size: 60px;  
+  }
+}

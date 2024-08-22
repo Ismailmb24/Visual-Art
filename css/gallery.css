@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, arial;
+}
+
+/* -------- inner cusor anim -------- */
+@keyframes inner-c-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------- content panel control slide anim -------- */
+@keyframes ctrl-slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* --------- header section style -------- */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  width: 50px;
+  margin: 0 20px;
+}
+#first-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#second-nav {
+   display: none;
+}
+#second-nav.active {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
+#nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nav-list li{
+  list-style: none;
+  margin: 20px 20px;
+}
+#nav-list li.active {
+  font-weight: bolder;
+}
+.nav-itm-link {
+  text-decoration: none;
+  color: black;
+}
+#nav-opener-sec {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+/* ------------ main section style ---------------- */
+#cusor-cover {
+  display: none;
+  justify-content: center;
+  justify-items: center;
+  position: fixed;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+#inner-c-cv {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: 2px 0 0 0;
+  border-top-color: white;
+  border-bottom-color: white; 
+}
+#inner-c-cv.active {
+  animation: inner-c-rotation 1s 0s infinite linear;
+}
+/* ------------ banner section style ------------ */
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#b-desc h1{
+  font-family: Poppins;
+  margin: 20px;
+}
+#head-2 {
+  font-size: 70px;
+}
+#b-con-p {
+  display: flex;
+  flex-direction: column;
+}
+#b-cp-imgs-sec {
+  display: flex;
+}
+.cp-img-wrap {
+  flex-basis: 20%;
+  margin: 0 5px;
+  height: 300px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 1s 0s linear;
+  background: url("../img/paint 3.jpg") scroll no-repeat center;
+  background-size: cover
+}
+.cp-img-wrap:nth-child(2) {
+  background: url("../img/photograph 3.jpg") scroll no-repeat center;
+  background-size: cover;
+}
+.cp-img-wrap:nth-child(3) {
+  background: url("../img/sculpture 4.jpg") scroll no-repeat center;
+  background-size: cover;
+}
+.cp-img-wrap.active {
+  flex-basis: 50%;
+}
+#b-cp-ctrls {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.ctrls{
+  width: 10px;
+  height: 10px;
+  background: gray;
+  margin: 0 2px;
+}
+.ctrls.active {
+  width: 20px;
+}
+.ctrls.active .ctrl-slide {
+  width: 20px;
+  height: 10px;
+  background: black;
+  animation: ctrl-slide 10s linear 0s 1;
+}
+
+/* --------- gallery section style ------------ */
+#gallery {
+  display: flex;
+  justify-content: center;
+}
+
+#gallery .col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 32%;
+}
+.col .g-img {
+  width: 100%;
+}
+
+/* ------------ responsive design of tablet ------------ */
+@media only screen and (min-width: 768px) {
+  /*---------------- header section style ---------------*/
+  header {
+    flex-direction: row;
+    justify-content: start;
+  }
+  #first-nav {
+    width: auto;
+  }
+  #nav-opener-sec {
+    display: none;
+  }
+  #second-nav {
+    display: block;
+  }
+  #nav-list {
+    flex-direction: row;
+  } 
+  /*------------ main section style ---------------*/
+  #banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #head-2 {
+    font-size: 90px;
+  }
+  #b-con-p {
+    flex-basis: 60%;
+  }
+  .cp-img-wrap {
+    height: 350px;
+  }
+}
+
+/* --------------- responsive design of screnn more than 980px width ------- */
+@media only screen and (min-width: 980px) {
+  /*----------- main section style ------------*/
+  #cusor-cover {
+    display: flex;
+  }
+  /* ---------- banner section design ---------- */
+  #head-2 {
+    font-size: 110px;
+  }
+  .cp-img-wrap {
+    height: 450px;
+  }
+}

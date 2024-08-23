@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Roboto, arial;
 }
 
@@ -75,29 +76,6 @@ header {
 }
 
 /* ------------ main section style ---------------- */
-#cusor-cover {
-  display: none;
-  justify-content: center;
-  justify-items: center;
-  position: fixed;
-  top: 0;
-  width: 60px;
-  height: 60px;
-  border: 5px solid black;
-  border-radius: 50%;
-}
-#inner-c-cv {
-  width: 50px;
-  height: 50px;
-  border: 3px solid black;
-  border-radius: 50%;
-  margin: 2px 0 0 0;
-  border-top-color: white;
-  border-bottom-color: white; 
-}
-#inner-c-cv.active {
-  animation: inner-c-rotation 1s 0s infinite linear;
-}
 /* ------------ banner section style ------------ */
 #banner {
   display: flex;
@@ -215,9 +193,6 @@ header {
 /* --------------- responsive design of screnn more than 980px width ------- */
 @media only screen and (min-width: 980px) {
   /*----------- main section style ------------*/
-  #cusor-cover {
-    display: flex;
-  }
   /* ---------- banner section design ---------- */
   #head-2 {
     font-size: 110px;

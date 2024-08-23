@@ -1,1 +1,39 @@
+footer {
+  background: black;
+  color: white;
+  height: 150px;
+}
+#pages {
+  text-align: center;
+}
+#pages-list {
+  display: flex;
+  justify-content: center;
+}
+#pages-list li {
+  margin: 0px 10px;
+  list-style: none;
+}
+#pages a {
+  color: white;
+}
+#builby {
+  text-align: center;
+  margin: 10px 0px;
+}
+#builby #bb-img {
+  width: 150px;
+}
+#copy-right {
+  text-align: center;
+}
 
+/* -------------- responsive design of tablet and laptop -------------------*/
+@media only screen and (min-width: 768px) {
+  #pages-list li {
+    margin: 0px 50px;
+  }
+  #builby {
+    margin: 20px;
+  }
+}

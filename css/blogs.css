@@ -81,41 +81,21 @@ a {
   text-decoration: none;
   color: black;
 }
-#cusor-cover {
-  display: none;
-  justify-content: center;
-  justify-items: center;
-  position: fixed;
-  top: 0;
-  width: 60px;
-  height: 60px;
-  border: 5px solid black;
-  border-radius: 50%;
-}
-#inner-c-cv {
-  width: 50px;
-  height: 50px;
-  border: 3px solid black;
-  border-radius: 50%;
-  margin: 2px 0 0 0;
-  border-top-color: white;
-  border-bottom-color: white; 
-}
-#inner-c-cv.active {
-  animation: inner-c-rotation 1s 0s infinite linear;
+main {
+  height: 90vh;
 }
 
 /* ------------- banner section style --------- */
-#banner {
+#blogs {
   display: flex;
   flex-direction: column;
 }
 
-#banner-head {
+#blogs-head {
   margin: 0 15px;
 }
 
-#banner .top-blogs {
+#blogs .top-blogs {
   margin: 15px 20px;
   border-radius: 10px;
   padding: 10px;
@@ -145,6 +125,11 @@ a {
   #nav-list {
     flex-direction: row;
   } 
+  
+  /* ------------ main section stylle ----------------- */
+  #blogs {
+    flex-direction: row;
+  }
 }
 
 /* -------------- responsive design of large tablet and lap top ---- */
